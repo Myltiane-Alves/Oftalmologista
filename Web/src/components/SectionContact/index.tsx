@@ -34,21 +34,6 @@ export default function SectionContact() {
           <input type="submit" className="btn" />
         </form>
       </div>
-      {/* <div className="contact-info">
-        {/* <h2>Contato</h2> */}
-        {/* <div className="email">
-          <AiFillMail size={24} style={{ color: "#FFFAFA" }} />
-          <p> myltiane.aux@gmail.com </p>
-        </div>
-        <div className="phone">
-          <RiWhatsappFill size={24} style={{ color: "#FFFAFA" }} />
-          <p> (61) 98491-5007 </p>
-        </div>
-        <div className="github">
-          <AiFillGithub size={24} style={{ color: "#FFFAFA" }} />
-          <p> https://github.com/Myltiane-Alves </p>
-        </div>
-      </div> */}
       <div className="address">
         <h2>Nossas Unidades</h2>
         <div className="address-info">
