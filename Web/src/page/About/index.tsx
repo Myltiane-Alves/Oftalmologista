@@ -8,7 +8,6 @@ export function About() {
   return (
     <>
       <Navbar />
-
       <CompanyValues />
       <Footer />
     </>

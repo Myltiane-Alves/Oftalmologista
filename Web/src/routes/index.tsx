@@ -5,6 +5,7 @@ import { Contact } from "../page/Contact";
 import { Home } from "../page/Home";
 import { Login } from "../page/Login";
 import { Schedules } from "../page/Schedules";
+import { SchedulesList } from "../page/SchedulesList";
 import { Services } from "../page/Services";
 import { Signup } from "../page/Signup";
 // import { SchedulesTimeOptions } from "../page/SchedulesTimeOptions";
@@ -36,6 +37,9 @@ export function AppRoutes() {
       </Routes>
       <Routes>
         <Route path="/Signup" element={<Signup />} />
+      </Routes>
+      <Routes>
+        <Route path="/SchedulesList" element={<SchedulesList />} />
       </Routes>
     </Router>
   )
