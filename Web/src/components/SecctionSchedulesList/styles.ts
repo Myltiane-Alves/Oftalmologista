@@ -2,22 +2,59 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   width: 100%;
-  .next-header {
+  .container-title {
+    background-color: #6996fa;
+    min-height: 160px;
     padding-top: 40px;
-    padding-left: 20px;
+    h1 {
+      font-size: 32px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    button {
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #6996fa
+      }
+    }
+  }
+  .next-header {
+    padding: 40px 0 40px 20px;
     text-align: left;
     h2 {
       font-size: 32px;
       color: #6996fa;
     }
+    .hr-next {
+      width: 80px;
+      border: none;
+      border-top: 4px solid #6996fa;
+      margin: 10px 0;
+    }
+    button {
+      width: 200px;
+      height: 50px;
+      background-color: #6996fa;
+      a {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
   }
   .historico-header {
-    padding-top: 20px;
-    padding-left: 20px;
+    padding: 40px 0 40px 20px;
     h2 {
       font-size: 32px;
       text-align: left;
       color: #6996fa;
+    }
+    .hr-historico {
+      width: 80px;
+      border: none;
+      border-top: 4px solid #6996fa;
+      margin: 10px 0;
     }
   }
   ul {
@@ -40,7 +77,6 @@ export const Container = styled.section`
           label, span {
             font-size: 16px;
             margin: 10px 0;
-            /* color: #919191; */
           }
           label {
             font-weight: bold;
@@ -53,7 +89,6 @@ export const Container = styled.section`
         justify-content: space-around;
         width: 100%;
         button {
-          /* display: flex; */
           width: 100px;
           align-self: center;
           cursor: pointer;
@@ -90,47 +125,91 @@ export const Container = styled.section`
     }
     li + li {
       border-top: #eeeeee 1px solid;
-      margin-top: 100px;
-      padding-top: 100px;
+      /* margin-top: 100px; */
+      padding-top: 50px;
     }
   }
-  /* @media (min-width: 768px) {
-    display: flex;
-    .about-img {
-      height: auto;
-      width: 100%;
-      background-size: cover;
-    }
-  }
-  @media (min-width: 1280px) {
-    padding: 20px;
-    .about {
-      h2 {
-        font-size: 48px;
-        line-height: 50px;
-        text-align: left;
-      }
-      p {
-        font-size: 22px;
-        line-height: 30px;
-      }
-    }
-    /* div {
-      h2 {
-        font-size: 2.5rem;
-      }
-      p {
-        font-size: 1.5rem;
-        line-height: 2.25rem;
-      }
+
+ @media (min-width: 768px) {
+    /* .container-title {
+      flex-direction: row;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       button {
-        width: 350px;
-        height: 50px;
-        a {
-          font-size: 1.5rem;
-          font-weight: 300;
+        width: 200px;
+        height: 40px;
+      }
+      h1 {
+        margin: 0;
+      }
+    } */
+   ul {
+    li {
+      section {
+        width: 100%;
+        > div {
+          label, span {
+            font-size: 24px;
+          }
         }
       }
     }
-  } */
+   }
+  }
+
+ @media (min-width: 1024px) {
+   ul {
+    li {
+      flex-direction: row;
+      section {
+        flex-wrap: nowrap;
+        flex: 1;
+        > div {
+          width: initial;
+          min-width: 150px;
+          label, span {
+            font-size: 18px;
+          }
+        }
+      }
+      .container-btn {
+        width: 100%;
+      }
+    }
+   }
+ }
+ @media (min-width: 1280px) {
+   .next-header {
+    padding-left: 50px;
+    h2 {
+      font-size: 48px;
+    }
+   }
+   .historico-header {
+    padding-left: 50px;
+    h2 {
+      font-size: 48px;
+    }
+   }
+   ul {
+    padding: 50px;
+    li {
+      flex-direction: row;
+      section {
+        flex-wrap: nowrap;
+        flex: 1;
+        > div {
+          width: initial;
+          min-width: 200px;
+          label, span {
+            font-size: 24px;
+          }
+        }
+      }
+      .container-btn {
+        width: 100%;
+      }
+    }
+   }
+ }
 `;

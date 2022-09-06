@@ -4,12 +4,136 @@ export default function SectionSchedulesList() {
   return (
     <S.Container>
       <header className="container-title">
-        <h1>Sobre nós</h1>
+        <h1>Agendamentos</h1>
       </header>
       <header className="next-header">
+        <button>
+          <a href="schedulesNew">Novo Agendamentos</a>
+        </button>
         <h2>Próximos</h2>
+        <hr className="hr-next" />
       </header>
       <ul>
+        <li>
+          <section>
+            <div>
+              <label htmlFor="">Data</label>
+              <span>05/09/2022</span>
+            </div>
+            <div>
+              <label htmlFor="">Status</label>
+              <span>Confirmado</span>
+            </div>
+            <div>
+              <label htmlFor="">Valor</label>
+              <span>100,00</span>
+            </div>
+            <div>
+              <label htmlFor="">Serviço</label>
+              <span>Consulta</span>
+            </div>
+          </section>
+          <div className="container-btn">
+            <button
+              className="btn-save"
+            >
+              <AiOutlineSave size={24} className="icons"/>
+              Salvar
+            </button>
+            <button
+              className="btn-edit"
+            >
+              <AiOutlineEdit size={24} className="icons"/>
+              Editar
+            </button>
+            <button
+              className="btn-cancel"
+            >
+              <AiOutlineClose size={24} className="icons"/>
+              Cancelar
+            </button>
+          </div>
+        </li>
+        <li>
+          <section>
+            <div>
+              <label htmlFor="">Data</label>
+              <span>05/09/2022</span>
+            </div>
+            <div>
+              <label htmlFor="">Status</label>
+              <span>Confirmado</span>
+            </div>
+            <div>
+              <label htmlFor="">Valor</label>
+              <span>100,00</span>
+            </div>
+            <div>
+              <label htmlFor="">Serviço</label>
+              <span>Consulta</span>
+            </div>
+          </section>
+          <div className="container-btn">
+            <button
+              className="btn-save"
+            >
+              <AiOutlineSave size={24} className="icons"/>
+              Salvar
+            </button>
+            <button
+              className="btn-edit"
+            >
+              <AiOutlineEdit size={24} className="icons"/>
+              Editar
+            </button>
+            <button
+              className="btn-cancel"
+            >
+              <AiOutlineClose size={24} className="icons"/>
+              Cancelar
+            </button>
+          </div>
+        </li>
+        <li>
+          <section>
+            <div>
+              <label htmlFor="">Data</label>
+              <span>05/09/2022</span>
+            </div>
+            <div>
+              <label htmlFor="">Status</label>
+              <span>Confirmado</span>
+            </div>
+            <div>
+              <label htmlFor="">Valor</label>
+              <span>100,00</span>
+            </div>
+            <div>
+              <label htmlFor="">Serviço</label>
+              <span>Consulta</span>
+            </div>
+          </section>
+          <div className="container-btn">
+            <button
+              className="btn-save"
+            >
+              <AiOutlineSave size={24} className="icons"/>
+              Salvar
+            </button>
+            <button
+              className="btn-edit"
+            >
+              <AiOutlineEdit size={24} className="icons"/>
+              Editar
+            </button>
+            <button
+              className="btn-cancel"
+            >
+              <AiOutlineClose size={24} className="icons"/>
+              Cancelar
+            </button>
+          </div>
+        </li>
         <li>
           <section>
             <div>
@@ -53,8 +177,89 @@ export default function SectionSchedulesList() {
       </ul>
       <header className="historico-header">
         <h2>Histórico</h2>
+        <hr className="hr-historico"/>
       </header>
       <ul>
+        <li>
+          <section>
+            <div>
+              <label htmlFor="">Data</label>
+              <span>05/09/2022</span>
+            </div>
+            <div>
+              <label htmlFor="">Status</label>
+              <span>Confirmado</span>
+            </div>
+            <div>
+              <label htmlFor="">Valor</label>
+              <span>100,00</span>
+            </div>
+            <div>
+              <label htmlFor="">Serviço</label>
+              <span>Consulta</span>
+            </div>
+          </section>
+          <div className="container-btn">
+            <button
+              className="btn-save"
+            >
+              <AiOutlineSave size={24} className="icons"/>
+              Salvar
+            </button>
+            <button
+              className="btn-edit"
+            >
+              <AiOutlineEdit size={24} className="icons"/>
+              Editar
+            </button>
+            <button
+              className="btn-cancel"
+            >
+              <AiOutlineClose size={24} className="icons"/>
+              Cancelar
+            </button>
+          </div>
+        </li>
+        <li>
+          <section>
+            <div>
+              <label htmlFor="">Data</label>
+              <span>05/09/2022</span>
+            </div>
+            <div>
+              <label htmlFor="">Status</label>
+              <span>Confirmado</span>
+            </div>
+            <div>
+              <label htmlFor="">Valor</label>
+              <span>100,00</span>
+            </div>
+            <div>
+              <label htmlFor="">Serviço</label>
+              <span>Consulta</span>
+            </div>
+          </section>
+          <div className="container-btn">
+            <button
+              className="btn-save"
+            >
+              <AiOutlineSave size={24} className="icons"/>
+              Salvar
+            </button>
+            <button
+              className="btn-edit"
+            >
+              <AiOutlineEdit size={24} className="icons"/>
+              Editar
+            </button>
+            <button
+              className="btn-cancel"
+            >
+              <AiOutlineClose size={24} className="icons"/>
+              Cancelar
+            </button>
+          </div>
+        </li>
         <li>
           <section>
             <div>
