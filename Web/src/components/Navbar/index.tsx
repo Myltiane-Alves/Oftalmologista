@@ -39,7 +39,7 @@ const Navbar: React.FC  =  () => {
                   type="button"
                   className="btnLogin"
                 >
-                <Link to="/login"> Login </Link>
+                <a href="/login"> Login </a>
                 </button>
               </div>
             </li>

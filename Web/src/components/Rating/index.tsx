@@ -9,7 +9,7 @@ export default function Rating() {
       </div>
       <div>
         <button>
-          <a>Avaliação Grátis</a>
+          <a href="schedulesNew">Avaliação Grátis</a>
         </button>
       </div>
     </S.Container>
