@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 import * as S from "./styles";
 import whats from "../../assets/img/whatsapp.webp"
 import { AiFillMail, AiFillGithub } from "react-icons/ai";
@@ -8,9 +8,16 @@ import { useForm } from 'react-hook-form';
 export default function SectionContact() {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [phone, setPhone] = useState('')
+
+  const url = "/contatcs";
+
+  const handleSubmit = async ()
   return (
     <S.Container>
-
       <div className="contact-form">
         <h2>Fale Conosco</h2>
         <form >
@@ -22,18 +29,28 @@ export default function SectionContact() {
             />
           </div>
           <div>
-            <input type="text" placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
+            <input
+              type="text"
+              placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+            />
           </div>
           <div>
-            <input type="tel" placeholder="Número" {...register("Número", { required: true, maxLength: 12 })} />
+            <input
+              type="tel"
+              placeholder="Número" {...register("Número", { required: true, maxLength: 12 })}
+            />
           </div>
 
           <div>
-            <textarea  placeholder="Mensagem" {...register("Mensagem", {})} />
+            <textarea
+              placeholder="Mensagem"
+              {...register("Mensagem", {})}
+            />
           </div>
           <input type="submit" className="btn" />
         </form>
       </div>
+
       <div className="address">
         <h2>Nossas Unidades</h2>
         <div className="address-info">
