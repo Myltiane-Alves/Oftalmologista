@@ -45,13 +45,15 @@ export const Nav = styled.div`
         font-size: 1.1rem;
         list-style: none;
         text-align: start;
+        cursor: pointer;
         & + li {
           margin-top: 0.5rem;
         }
 
         a {
-          font-size: 20px;
-          font-weight: 500;
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 32px;
           color: #6996fa;
           padding: 0.5rem;
           display: block;

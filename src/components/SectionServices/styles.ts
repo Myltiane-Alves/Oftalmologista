@@ -18,7 +18,7 @@ export const Container = styled.section`
       line-height: 36px;
       color: #6996fa;
       text-align: center;
-      margin: 0;
+      /* margin: 0; */
     }
   }
   .container-cards {
@@ -38,7 +38,7 @@ export const Container = styled.section`
         h3 {
           font-size: 20px;
           color: #6996fa;
-          line-height: 26px;
+          line-height: 30px;
         }
         p {
           font-size: 16px;

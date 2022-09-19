@@ -41,6 +41,13 @@ export const Container = styled.footer`
         }
       }
     }
+    .logo {
+      a {
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
   .text-footer {
     width: 250px;

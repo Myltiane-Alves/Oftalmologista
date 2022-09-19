@@ -5,7 +5,7 @@ export default function Plan() {
     <S.Container>
       <div className="container-title">
         <p>Conheça nossos planos</p>
-        <h1>Planos</h1>
+        <h2>Planos</h2>
         {/* <div>
           <p>
             princípio da medicina de família,
@@ -46,8 +46,9 @@ export default function Plan() {
             <div className="container-btn">
               <button
                 type="button"
+                aria-label="Escolha seu plano"
               >
-                <a>
+                <a href="/">
                   Escolha seu Plano
                 </a>
               </button>
@@ -82,8 +83,9 @@ export default function Plan() {
             <div className="container-btn">
               <button
                 type="button"
+                aria-label="Escolha seu Plano"
               >
-                <a>
+                <a href="/">
                   Escolha seu Plano
                 </a>
               </button>
@@ -118,8 +120,9 @@ export default function Plan() {
             <div className="container-btn">
               <button
                 type="button"
+                aria-label="Escolha seu Plano"
               >
-                <a>
+                <a href="/">
                   Escolha seu Plano
                 </a>
               </button>

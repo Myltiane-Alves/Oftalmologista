@@ -16,11 +16,16 @@ const Navbar: React.FC  =  () => {
     <S.Container>
       <S.Content>
         <div className="container-logo">
-          <a>
+          <a href="/">
             <img src={logo} alt="logo" className="logo"/>
           </a>
         </div>
-        <button className="mobileMenu" type="button" onClick={OpenMobileMenu}>
+        <button
+          className="mobileMenu"
+          type="button"
+          onClick={OpenMobileMenu}
+          aria-label="Open Menu"
+        >
           <AiOutlineAlignRight size={50}/>
         </button>
         {mobileMenu && <MobileMenu  openMobileMenu={OpenMobileMenu}/>}

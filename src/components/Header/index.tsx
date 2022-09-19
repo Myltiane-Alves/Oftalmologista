@@ -4,7 +4,7 @@ import * as S from "./styles";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import bg3 from "../../assets/img/bg3.jpg";
+import bg3 from "../../assets/img/bg3.webp";
 import bg6 from "../../assets/img/bg6.webp"
 
 import { Autoplay, Navigation, Pagination } from "swiper";
@@ -29,7 +29,9 @@ export default function Header() {
             ESPECIALIZADA EM RETINA E VÍTRE O
 
           </h1> */}
-          <img src={bg3} alt="médico com uma criança" width="100%"                             />
+          <img
+            src={bg3}
+            alt="médico com uma criança" width="100%"                             />
         </SwiperSlide>
         <SwiperSlide> <img src={bg6} alt="médico com uma criança" width="100%"/></SwiperSlide>
 

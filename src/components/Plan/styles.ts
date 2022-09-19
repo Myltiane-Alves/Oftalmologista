@@ -12,7 +12,7 @@ export const Container = styled.section`
       text-align: center;
       color: #919191;
     }
-    h1 {
+    h2 {
       font-size: 40px;
       color: #6996fa;
       text-align: center;

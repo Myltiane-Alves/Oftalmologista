@@ -12,7 +12,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
     <S.Container>
       <S.Nav>
         <div className="logoMenu">
-          <a>
+          <a href="/">
             <img src={logo} alt="logo" />
           </a>
         </div>
@@ -28,6 +28,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
               <button
                 type="button"
                 className="btnLogin"
+                aria-label="Login"
               >
                <Link to="/login"> Login </Link>
               </button>
@@ -35,7 +36,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
           </li>
         </ul>
         <div className="container-closeMenu">
-          <button className="closeMenu" type="button" onClick={openMobileMenu}>
+          <button
+            className="closeMenu"
+            type="button"
+            aria-label="Close Menu"
+            onClick={openMobileMenu}>
             <AiOutlineClose className="icon"/>
           </button>
         </div>

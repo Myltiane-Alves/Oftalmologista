@@ -5,14 +5,15 @@ import logo from "../../assets/img/visao.png"
 export default function Footer() {
   return (
     <S.Container>
-      <button
+      {/* <button
         type="button"
+        aria-label="Whatsapp"
       >
-        {/* <a
+        <a
           href="https://api.whatsapp.com/send/?phone=5561984915007&text=Vim+Pelo+site&app_absent=0"
           ><img src={whats} alt="Botão do Whatsapp"
-        /></a> */}
-      </button>
+        /></a>
+      </button> */}
       <div className="columns">
 
         <div className="columns-text">
@@ -53,7 +54,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="logo">
-          <a>
+          <a href="/">
             <img src={logo} alt="Logo " />
           </a>
         </div>
