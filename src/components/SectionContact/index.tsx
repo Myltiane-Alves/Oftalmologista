@@ -1,54 +1,119 @@
 import { useState } from 'react';
 import * as S from "./styles";
-import whats from "../../assets/img/whatsapp.webp"
-import { AiFillMail, AiFillGithub } from "react-icons/ai";
-import { RiWhatsappFill, RiSendPlaneFill } from "react-icons/ri";
 
 import { useForm } from 'react-hook-form';
+import { post } from '../../api/service';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+import { ContactProps } from '../../@types/Contatc';
+
 export default function SectionContact() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactProps>()
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [phone, setPhone] = useState('')
+  const [sent, setSent] = useState(false)
+  const url = "/contacts";
 
-  const url = "/contatcs";
+  const onSubmit = async () => {
 
-  const handleSubmit = async ()
+    let objToSave = {
+      name: name,
+      email: email,
+      message: message,
+      phone: phone
+    }
+
+    await post(url, objToSave)
+    .then((response) => {
+      toast.success('Mensagem enviada com sucesso!')
+      reset()
+
+    })
+    .catch((error) => {
+      toast.warning('Erro ao enviar mensagem! Verifique os dados e tente novamente.')
+    })
+  }
+
   return (
     <S.Container>
       <div className="contact-form">
         <h2>Fale Conosco</h2>
-        <form >
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <input
               type="text"
               placeholder="Nome"
-              {...register("Nome", { required: true, maxLength: 80 })}
+              value={name}
+              {...register("name", {
+                required: "Nome é obrigatório",
+                onChange: (e) => setName(e.target.value)
+              })}
             />
           </div>
           <div>
             <input
               type="text"
-              placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+              placeholder="Email"
+              value={email}
+              {...register("email", {
+                required: "Email é obrigatório",
+                onChange: (e) => setEmail(e.target.value)
+              })}
             />
           </div>
           <div>
             <input
               type="tel"
-              placeholder="Número" {...register("Número", { required: true, maxLength: 12 })}
+              placeholder="Número"
+              value={phone}
+              {...register("phone", {
+                required: "Número é obrigatório",
+                onChange: (e) => setPhone(e.target.value),
+                pattern: {
+                  value: /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
+                  message: "Numero Inválido",
+                },
+              })}
             />
           </div>
 
           <div>
             <textarea
               placeholder="Mensagem"
-              {...register("Mensagem", {})}
+              value={message}
+              onFocus={(e) => e.target.placeholder = ""}
+              {...register("message", {
+                required: "Descreva sua Mensagem",
+                onChange: (e) => setMessage(e.target.value),
+                minLength: {
+                  value: 5,
+                  message: "Mensagem muito curta descreva melhor",
+                }
+              })}
             />
           </div>
-          <input type="submit" className="btn" />
+          <input
+            type="submit"
+            className="btn"
+            onClick={onSubmit}
+            value="Enviar Mensagem"
+          />
         </form>
+        <ToastContainer
+            position='top-right'
+            autoClose={8000}
+            hideProgressBar={true}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+
+        />
       </div>
 
       <div className="address">
@@ -107,6 +172,7 @@ export default function SectionContact() {
           </div>
         </div>
       </div>
+
     </S.Container>
   )
 }

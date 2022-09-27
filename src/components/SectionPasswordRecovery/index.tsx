@@ -5,36 +5,8 @@ import linkedin from "../../assets/img/linkedin.png"
 import instagram from "../../assets/img/instagram.png"
 import youtube from "../../assets/img/youtube2.png"
 import whatsapp from "../../assets/img/whatsapp2.png"
-import { useState } from 'react';
-import { post } from '../../api/service';
-import { toast, ToastContainer } from 'react-toastify';
-import { nextTick } from 'process';
-import { useNavigate } from 'react-router-dom';
 export default function SectionLogin() {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
-
-  const [password, setPassword] = useState('')
-  const [email, setEmail] = useState('')
-  const url = "/login";
-  const navigate = useNavigate()
-
-  const onSubmit = async () => {
-
-    let objToSave = {
-      email: email,
-      password: password
-    }
-
-    await post(url, objToSave)
-    .then((response) => {
-      toast.success('Login realizado com sucesso!')
-      navigate('/')
-      reset()
-    })
-    .catch((error) => {
-      toast.warning('Erro ao realizar login! Verifique os campos do formulário e tente novamente.')
-    })
-  }
+  const { register, handleSubmit, formState: { errors } } = useForm();
   return (
     <S.Container>
       <div className="contact-form">
@@ -43,31 +15,24 @@ export default function SectionLogin() {
             <img src={logo}  alt="logo"/>
           </a>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <h1>Login</h1>
+        <form >
+          <h1>Cadastrar Nova Senha</h1>
           <div className="fields">
             <div className="field">
               <input
-                 type="text"
-                 placeholder="Email"
-                value={email}
-                {...register("Email", {
-                  required: "Email é obrigatório",
-                  onChange: (e) => setEmail(e.target.value)
-                })}
+                type="password"
+                placeholder=" Nova Senha"
+                {...register("Senha", { required: true, maxLength: 80 })}
               />
             </div>
             <div className="field">
               <input
                 type="password"
-                placeholder="Senha"
-                value={password}
-                {...register("Senha", {
-                  required: true, maxLength: 16, minLength: 7,
-                  onChange: (e) => setPassword(e.target.value)
-                })}
+                placeholder="Confirme sua Senha"
+                {...register("Senha", { required: true, maxLength: 80 })}
               />
             </div>
+
           </div>
           <div className="container-btn">
             <button type="submit" className="btn"> Entrar</button>
@@ -75,17 +40,6 @@ export default function SectionLogin() {
             <a href="/signup">Criar Conta</a>
           </div>
         </form>
-        <ToastContainer
-          position="bottom-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
       </div>
       <div className="about-img">
         <a href='/'>
@@ -119,7 +73,3 @@ export default function SectionLogin() {
     </S.Container>
   )
 }
-function next() {
-  throw new Error('Function not implemented.');
-}
-

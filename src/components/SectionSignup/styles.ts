@@ -43,18 +43,20 @@ export const Container = styled.section`
 
           select {
             font-size: 20px;
-            font-weight: bold;
+            font-weight: 500;
             outline: none;
             line-height: 32px;
             border: 2px solid #E6E5E5;
             padding: 10px;
-            background-color: #EDEDED;
+            background-color: #ededed33;
             transition: all 0.3s ease-in-out;
-            color: #919191;
-
           }
           select::placeholder {
             color: #919191;
+          }
+          select:focus {
+            color: #156ac9;
+            background-color: #ededed33;
           }
           input {
             font-size: 20px;
@@ -64,42 +66,40 @@ export const Container = styled.section`
             border-radius: 4px;
             border: 2px solid #E6E5E5;
             padding: 10px;
-            background-color: #EDEDED;
+            background-color: #ededed33;
             transition: all 0.3s ease-in-out;
           }
           input:focus {
-            background-color: #ededed33;
+            background-color: #fff;
           }
           input::placeholder {
             color: #919191;
           }
-          input[type="date"] {
-            color: #919191;
-          }
+
         }
       }
       .container-btn {
         flex-direction: column;
         .btn {
           border: 2px solid #E6E5E5;
-          border-radius: 3px;
+          border-radius: 5px;
           padding: 10px 30px;
-          transition: 0.5s ease-in-out;
-          background-color: #E6E5E5;
+          transition: 0.2s ease-in-out;
+          background-color: #156ac9;
           width: 100%;
           max-width: 300px;
           height: 60px;
           margin: auto;
           cursor: pointer;
-          color: #156ac9;
+          color: #fff;
           font-size: 16px;
           line-height: 32px;
           font-weight: 600;
         }
         .btn:hover {
-          background-color: transparent;
+          background-color: #156ac9de;
           border: 1px solid #FFFAFA;
-          transition: all 0.5s ease-in-out;
+          transition: all 0.2s ease-in;
           color: #FFFAFA;
         }
         span {

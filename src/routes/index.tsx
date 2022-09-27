@@ -36,7 +36,7 @@ export function AppRoutes() {
         <Route path="/login" element={<Login />} />
       </Routes>
       <Routes>
-        <Route path="/Signup" element={<Signup />} />
+        <Route path="/users" element={<Signup />} />
       </Routes>
       <Routes>
         <Route path="/SchedulesList" element={<SchedulesList />} />
