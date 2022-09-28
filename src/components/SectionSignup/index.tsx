@@ -45,11 +45,16 @@ export default function SectionSignup() {
 
     await post(url, objToSave)
     .then((response) => {
-      toast.success('Cadastro realizado com sucesso!')
-      navigate('/login')
+      if(objToSave) {
+        toast.success('Cadastro realizado com sucesso!')
+        navigate('/login')
+
+      }
+      // toast.success('Cadastro realizado com sucesso!')
+      // navigate('/login')
     })
     .catch((error) => {
-      toast.warning('Erro ao realizar cadastro! Verifique os campos e tente novamente.')
+      toast.warning('Erro ao realizar cadastro! Usuário Já Existe.')
     })
   }
 
