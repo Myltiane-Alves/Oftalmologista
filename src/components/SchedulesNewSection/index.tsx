@@ -1,5 +1,3 @@
-import Calendar from '../Calendar'
-import FooterButton from '../FooterButton'
 import * as S from './styles'
 import { useForm } from 'react-hook-form';
 import agendamento from "../../assets/img/agenda.png"
@@ -22,10 +20,20 @@ export default function SchedulesNewSection() {
             />
           </div>
           <div>
-            <input type="text" placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
+            <input
+              type="text"
+              placeholder="Email"
+              {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+
+            />
           </div>
           <div>
-            <input type="tel" placeholder="Número" {...register("Número", { required: true, maxLength: 12 })} />
+            <input
+              type="tel"
+              placeholder="Número"
+              {...register("Número", { required: true, maxLength: 12 })}
+
+            />
           </div>
           <div>
             <select placeholder="Selecione" >
@@ -38,10 +46,20 @@ export default function SchedulesNewSection() {
             </select>
           </div>
           <div>
-            <input type="datetime-local" placeholder="Escolha o Horário" {...register("Escolha o Horário", {})} />
+            <input
+              type="datetime-local"
+              placeholder="Escolha o Horário"
+              {...register("Escolha o Horário", {})}
+
+            />
           </div>
           <div>
-            <input type="text" placeholder="Mensagem" {...register("Mensagem", {})} />
+            <input
+              type="text"
+              placeholder="Mensagem"
+              {...register("Mensagem", {})}
+
+            />
           </div>
           <div className="container-btn">
             <button type="submit" className="btn" >
