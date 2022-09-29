@@ -44,13 +44,12 @@ export const Container = styled.footer`
     .logo {
       a {
         img {
-          width: 100%;
+          width: 70%;
         }
       }
     }
   }
   .text-footer {
-    width: 250px;
     p {
       font-size: 16px;
       text-align: center;

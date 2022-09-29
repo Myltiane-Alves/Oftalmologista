@@ -10,7 +10,7 @@ import { post } from '../../api/service';
 import { toast, ToastContainer } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 export default function SectionSignup() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const [name, setName] = useState('')
   const [cpf, setCPF] = useState('')
@@ -47,14 +47,15 @@ export default function SectionSignup() {
     .then((response) => {
       if(objToSave) {
         toast.success('Cadastro realizado com sucesso!')
-        navigate('/login')
+        // navigate('/login')
+        reset()
 
       }
       // toast.success('Cadastro realizado com sucesso!')
       // navigate('/login')
     })
     .catch((error) => {
-      toast.warning('Erro ao realizar cadastro! Usuário Já Existe.')
+      toast.warning('Erro ao realizar cadastro! Usuário Já Existe. ou Email Já Existe.')
     })
   }
 

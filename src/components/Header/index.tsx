@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <S.Container>
       <Swiper
-        autoHeight={true}
+        autoHeight={false}
         pagination={{
           clickable: true,
         }}
@@ -29,9 +29,7 @@ export default function Header() {
             ESPECIALIZADA EM RETINA E VÍTRE O
 
           </h1> */}
-          <img
-            src={bg3}
-            alt="médico com uma criança" width="100%"                             />
+          <img src={bg3} alt="médico com uma criança" width="100%"/>
         </SwiperSlide>
         <SwiperSlide> <img src={bg6} alt="médico com uma criança" width="100%"/></SwiperSlide>
 

@@ -29,7 +29,7 @@ export const Container = styled.section`
         flex-direction: column;
         width: 100%;
         max-width: 250px;
-        box-shadow: 10px 8px 35px 0px rgba(0,0,0,0.09);
+        box-shadow: 10px 8px 35px 10px rgba(0,0,0,0.09);
         border-radius: 15px;
         padding-top: 20px;
         margin: 20px auto;

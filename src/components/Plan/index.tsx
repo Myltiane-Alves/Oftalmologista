@@ -6,13 +6,7 @@ export default function Plan() {
       <div className="container-title">
         <p>Conheça nossos planos</p>
         <h2>Planos</h2>
-        {/* <div>
-          <p>
-            princípio da medicina de família,
-            o que significa que o médico de família atenderá à maioria dos pedidos médicos,
-            com especialistas envolvidos apenas se necessário.
-          </p>
-        </div> */}
+
       </div>
       <div className="container-plan">
         <div className="cards">

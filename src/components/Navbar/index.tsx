@@ -37,7 +37,6 @@ const Navbar: React.FC  =  () => {
             <li><a href="contact">Contato</a></li>
             <li><a href="services">Serviços</a></li>
             <li><a href="schedulesNew">Agendamentos</a></li>
-            <li><a href="SchedulesList">SchedulesList</a></li>
             <li>
               <div className="container-btnLogin">
                 <button

@@ -7,8 +7,18 @@ export const Container = styled.section`
     padding-bottom: 10px;
     .form-header {
       padding-top: 20px;
+      .container-icons {
+        padding-left: 20px;
+        display: flex;
+        a {
+          .icon-back {
+            color: #fff;
+          }
+        }
+      }
       h2 {
         font-size: 32px;
+        line-height: 40px;
         font-weight: bold;
         color: #FFFAFA;
         text-align: center;
@@ -16,6 +26,7 @@ export const Container = styled.section`
       }
       p {
         font-size: 16px;
+        line-height: 32px;
         color: #FFFAFA;
         font-weight: 500;
         text-transform: uppercase;
@@ -38,6 +49,7 @@ export const Container = styled.section`
         }
         input {
           /* height: 2.5rem; */
+          width: 95%;
           border: none;
           padding: 10px;
           border-radius: 5px;
@@ -49,7 +61,7 @@ export const Container = styled.section`
           border: none;
         }
         textarea {
-          height: 200px;
+          height: 150px;
           width: 100%;
           border: none;
           border-radius: 5px;
@@ -121,18 +133,23 @@ export const Container = styled.section`
       padding-top: 50px;
       width: 100%;
       form {
-        display: grid;
-        flex-direction: row;
-        grid-template-columns: 1fr 1fr;
-        width: 91%;
+        width: 90%;
+        .container-form {
+          display: grid;
+          flex-direction: row;
+          grid-template-columns: 1fr 1fr;
+
+          width: 100%;
+        }
         div {
+          width: 100%;
           input {
-            width: 80%;
+            width: 90%;
           }
         }
         div {
-          select {
-            width: 85%;
+          textarea {
+            width: 95%;
           }
         }
         .container-btn {
@@ -156,6 +173,10 @@ export const Container = styled.section`
     .contact-form {
       .form-header {
         padding: 20px;
+        .container-icons {
+          padding: 0;
+
+        }
         h2 {
           text-align: initial;
         }
@@ -163,6 +184,9 @@ export const Container = styled.section`
           text-align: initial;
 
         }
+      }
+      form {
+        width: 90%;
       }
       width: 100%;
     }
